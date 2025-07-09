@@ -22,15 +22,4 @@ Model Training
 The machine learning model is trained using a supervised learning algorithm, such as a decision tree or random forest, to predict the math score based on the input features. The dataset is split into training and testing sets to evaluate the model's performance.
 
 Technology Used
-Python
-Machine Learning
-Pandas
-Numpy
-Scikit-learn
-Flask
-HTML
-CSS
-Installation Step : -
-Python 3.7.0
-command 1 - python -m pip install –-user -r requirements.txt
-command 2 - python app.py
+Python, Machine Learning, Pandas, Numpy, Scikit-learn, Flask, HTML, CSS
