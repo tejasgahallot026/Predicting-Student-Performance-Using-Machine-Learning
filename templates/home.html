@@ -83,9 +83,10 @@
             </div>
         </form>
         
-        <h2>
-            The prediction is {{results}}
-        </h2>
+        {% if error %}<p style="color:#B03A2E;font-weight:600">{{ error }}</p>{% endif %}
+        {% if results is defined %}
+        <h2>The predicted maths score is {{ results }}</h2>
+        {% endif %}
     </div>
 </body>
 </html>
