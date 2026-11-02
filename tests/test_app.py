@@ -1,3 +1,5 @@
+import re
+
 import pandas as pd
 import pytest
 from sklearn.metrics import mean_absolute_error, r2_score
@@ -63,3 +65,10 @@ def test_form_page_shows_no_result_before_submitting(client):
 
 def test_health(client):
     assert client.get("/health").get_json() == {"status": "ok", "model": "LinearRegression"}
+
+
+def test_form_labels_match_input_names(client):
+    """Regression: the template labelled the reading_score box 'Writing Score' and vice versa."""
+    html = client.get("/predictdata").data.decode()
+    assert re.search(r'for="reading-score"[^>]*>\s*Reading Score', html)
+    assert re.search(r'for="writing-score"[^>]*>\s*Writing Score', html)
