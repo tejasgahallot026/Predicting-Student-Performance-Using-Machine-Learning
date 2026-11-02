@@ -2,6 +2,8 @@
 
 An end-to-end machine learning project that predicts a student's **maths score** from their background and their reading and writing scores, served through a Flask web form.
 
+**Live demo:** https://student-performance-predictor-6fjr.onrender.com/predictdata (free hosting, so the first load after a quiet period can take about a minute)
+
 ## Results
 
 Evaluated on a held-out test set of 200 students (80/20 split of 1,000, `random_state=42`):
